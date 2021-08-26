@@ -9,4 +9,11 @@ export const strings = {
       },
     },
   },
+  organisms: {
+    atomsOverview: {
+      title: "Atoms",
+      subtitle:
+        "Atoms include basic HTML tags like inputs, labels, and buttons",
+    },
+  },
 };

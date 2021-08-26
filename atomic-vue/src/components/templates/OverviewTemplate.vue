@@ -4,9 +4,9 @@
       <slot name="navbar" />
     </div>
 
-    <div class="overview-content">
+    <section class="overview-content">
       <slot name="content" />
-    </div>
+    </section>
   </div>
 </template>
 
@@ -24,6 +24,9 @@ export default {
   justify-content: center;
 }
 .overview-navbar {
-  margin-top: 2rem;
+  padding: 2rem 0;
+}
+.overview-content {
+  padding: 2rem;
 }
 </style>

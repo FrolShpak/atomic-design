@@ -16,14 +16,14 @@ export default {
   components: { OverviewTemplate, OverviewNavigation },
   computed: {
     overviewRoutes() {
-      let overviewRoutes = [];
-      const overviewRoute = routes.find(
+      const toReturn = [];
+      const overviewRoutes = routes.find(
         (route) => route.name === strings.routes.overview.name
       );
-      if (overviewRoute) {
-        overviewRoutes = overviewRoute.children;
+      if (overviewRoutes) {
+        toReturn.push(overviewRoutes.children);
       }
-      return overviewRoutes;
+      return toReturn;
     },
   },
 };

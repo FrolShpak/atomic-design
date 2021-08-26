@@ -1,10 +1,10 @@
 <template>
-  <label class="atom-route-label">{{ text }}</label>
+  <h1 class="atom-title">{{ text }}</h1>
 </template>
 
 <script>
 export default {
-  name: "RouterLabel",
+  name: "Title",
   props: {
     text: {
       type: String,
@@ -15,8 +15,7 @@ export default {
 </script>
 
 <style scoped>
-.atom-route-label {
-  text-transform: uppercase;
-  cursor: pointer;
+.atom-title {
+  margin: 0;
 }
 </style>
