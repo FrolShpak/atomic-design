@@ -32,7 +32,10 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.overview-navigation .router-link-active {
+  text-decoration: underline;
+}
 .overview-navigation__router-link {
   padding: 1rem 0.5rem;
   text-decoration: none;

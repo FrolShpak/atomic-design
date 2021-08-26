@@ -1,5 +1,5 @@
 <template>
-  <div class="molecule-title-with-subtitle">
+  <div class="molecule-title-with-subtitle" :class="centeredClass">
     <Title :text="titleText" />
     <Subtitle :text="subtitleText" />
   </div>
@@ -24,11 +24,28 @@ export default {
       type: String,
       required: true,
     },
+    centered: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+  },
+  computed: {
+    centeredClass() {
+      if (this.centered) {
+        return "molecule-title-with-subtitle--centered";
+      }
+      return "";
+    },
   },
 };
 </script>
 
 <style scoped>
-.molecule-title-with-subtitle {
+.molecule-title-with-subtitle--centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>

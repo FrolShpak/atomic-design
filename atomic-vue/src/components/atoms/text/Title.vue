@@ -17,5 +17,6 @@ export default {
 <style scoped>
 .atom-title {
   margin: 0;
+  color: #0f0f0f;
 }
 </style>
