@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["/*"],
+      "@atoms/*": ["/components/atoms/*"],
+      "@molecules/*": ["/components/molecules/*"],
+      "@organisms/*": ["/components/organisms/*"],
+      "@templates/*": ["/components/templates/*"],
+      "@pages/*": ["/components/pages/*"],
+      "@constants/*": ["/constants/*"]
+    }
+  }
+}
