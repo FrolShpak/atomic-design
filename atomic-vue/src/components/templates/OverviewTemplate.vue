@@ -19,7 +19,6 @@ export default {
 <style>
 .overview-navbar,
 .overview-content {
-  width: 100%;
   display: flex;
   justify-content: center;
 }

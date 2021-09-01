@@ -1,23 +1,19 @@
 <template>
-  <nav class="overview-navigation" v-if="overviewRoutes.length">
-    <router-link
-      v-for="(route, index) in overviewRoutes"
-      class="overview-navigation__router-link"
-      :key="index"
-      :to="{ name: route.name }"
-      ><RouterLabel :text="route.name" />
-    </router-link>
-  </nav>
+  <div class="organism container">
+    <Navigation :routes="overviewRoutes" />
+    <ComponentsHighlighter />
+  </div>
 </template>
 
 <script>
 import { routes } from "@constants/routes";
 import { strings } from "@constants/strings";
-import RouterLabel from "@atoms/text/RouterLabel.vue";
+import Navigation from "@molecules/Navigation.vue";
+import ComponentsHighlighter from "@molecules/ComponentsHighlighter.vue";
 
 export default {
   name: "OverviewNavigation",
-  components: { RouterLabel },
+  components: { ComponentsHighlighter, Navigation },
   computed: {
     overviewRoutes() {
       const overviewRoute = routes.find(
@@ -33,8 +29,13 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-direction: row;
+}
 .overview-navigation .router-link-active {
   text-decoration: underline;
+  text-decoration-color: #0f0f0f;
 }
 .overview-navigation__router-link {
   padding: 1rem 0.5rem;

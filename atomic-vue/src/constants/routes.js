@@ -1,12 +1,11 @@
 import { strings } from "./strings";
-import LandingPage from "@pages/LandingPage";
 import OverviewPage from "@pages/OverviewPage";
 import AtomsOverview from "@organisms/AtomsOverview";
 import MoleculesOverview from "@organisms/MoleculesOverview";
 import OrganismsOverview from "@organisms/OrganismsOverview";
 
 export const routes = [
-  { path: "/", component: LandingPage },
+  { path: "/", redirect: `/${strings.routes.overview.name}` },
   {
     path: `/${strings.routes.overview.name}`,
     name: strings.routes.overview.name,

@@ -1,5 +1,5 @@
 <template>
-  <h1 class="atom-title">{{ text }}</h1>
+  <h1 class="atom title">{{ text }}</h1>
 </template>
 
 <script>
@@ -15,7 +15,8 @@ export default {
 </script>
 
 <style scoped>
-.atom-title {
+.title {
+  font-family: "Roboto", sans-serif;
   margin: 0;
   color: #0f0f0f;
 }

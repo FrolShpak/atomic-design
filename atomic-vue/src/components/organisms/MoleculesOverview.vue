@@ -1,20 +1,20 @@
 <template>
-  <div class="molecules-overview">
+  <div class="organism molecules-overview">
     <TitleWithSubtitle :titleText="titleText" :subtitleText="subtitleText" />
-    <div class="collection-display">
-      <div class="collection-item-display"></div>
-    </div>
+    <MoleculesDisplay />
   </div>
 </template>
 
 <script>
 import { strings } from "@constants/strings";
 import TitleWithSubtitle from "@molecules/TitleWithSubtitle.vue";
+import MoleculesDisplay from "@organisms/MoleculesDisplay.vue";
 
 export default {
   name: "MoleculesOverview",
   components: {
     TitleWithSubtitle,
+    MoleculesDisplay,
   },
   computed: {
     titleText() {
@@ -27,5 +27,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

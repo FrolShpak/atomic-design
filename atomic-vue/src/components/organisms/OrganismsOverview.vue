@@ -1,5 +1,5 @@
 <template>
-  <div class="organisms-overview">
+  <div class="organism organisms-overview">
     <TitleWithSubtitle :titleText="titleText" :subtitleText="subtitleText" />
     <div class="collection-display">
       <div class="collection-item-display"></div>
@@ -28,4 +28,5 @@ export default {
 </script>
 
 <style>
+/* #5FA0F5 */
 </style>
