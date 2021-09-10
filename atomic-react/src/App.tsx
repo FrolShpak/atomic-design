@@ -1,20 +1,20 @@
 import { Route, BrowserRouter, Switch } from "react-router-dom";
-import LandingPage from "./components/pages/LandingPage";
-import OverviewPage from "./components/pages/OverviewPage";
+import { routes } from "./constants/routes";
 
-function App() {
+const App = () => {
+  const [landingRoute, overviewRoute] = routes;
+  console.log(landingRoute);
+  console.log(overviewRoute);
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/overview">
-          <OverviewPage />
+        <Route exact path={landingRoute.path}>
+          {landingRoute.component}
         </Route>
-        <Route path="/">
-          <LandingPage />
-        </Route>
+        <Route path={overviewRoute.path}>{overviewRoute.component}</Route>
       </Switch>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

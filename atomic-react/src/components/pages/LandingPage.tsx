@@ -1,5 +1,7 @@
-function LandingPage() {
-  return <h1>Landing</h1>;
-}
+import { Link } from "react-router-dom";
+
+const LandingPage = () => {
+  return <Link to="/overview">Overview</Link>;
+};
 
 export default LandingPage;
